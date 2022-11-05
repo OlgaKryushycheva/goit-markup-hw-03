@@ -276,11 +276,10 @@ address {
 }
 
 /* наша команда */
-.team-style {
+.our-team {
   background-color: var(--background-color-gray);
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
+
 .team-name {
   font-weight: 500;
   font-size: 16px;
@@ -417,8 +416,3 @@ footer .logo {
   line-height: 1.9px;
   letter-spacing: 0.03em;
 }
-
-/*  путь к картинке ../имаджес/фото 
-бэкграунд колор
-бэкграунж имвдж урл
-*/
