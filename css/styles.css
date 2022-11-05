@@ -5,6 +5,8 @@
   --contrast-color: #ffffff;
   --logo-color-header: #000000;
   --background-color-black: #2f303a;
+  --background-color-gray: #f5f4fa;
+  --border-card-project: 1px solid #eeeeee;
 }
 
 /* ЗАГАЛЬНІ */
@@ -16,9 +18,23 @@ body {
   font-size: 14px;
 }
 
+/* РЕСЕТИ */
+/* скидання стилів */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 /* усі списки */
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* усі посилання */
@@ -32,14 +48,33 @@ p {
   color: var(--paragraf-text-color);
 }
 
-/* активна сторінка */
-.current {
-  color: var(--accent-color);
+/* усі картинки */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-/* фон сторінки */
-.style {
-  background-color: var(--background-color-black);
+/* адреса */
+address {
+  font-style: normal;
+}
+
+/* КОМПОНЕНТИ */
+
+/* контейнер */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* усі секції */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* заголовки секцій */
@@ -48,12 +83,48 @@ p {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+
+  margin-bottom: 50px;
+}
+
+/* прихований контент */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* фон герой і футер */
+.style {
+  background-color: var(--background-color-black);
 }
 
 /* ОКРЕМІ */
 
+/* ХЕДЕР */
+
+.header {
+  border-bottom: var(--border-card-project);
+}
+.container-header {
+  display: flex;
+
+  align-items: center;
+}
+
 /* лого */
 .logo {
+  display: block;
+  margin-right: 93px;
+
   color: var(--logo-color-header);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -80,22 +151,53 @@ p {
 }
 
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.site-nav {
+  display: flex;
+  gap: 50px;
+}
+
+/* активна сторінка */
+.current {
+  color: var(--accent-color);
 }
 
 /* контакти хедер */
 .contact-heder {
+  display: flex;
+  margin-left: auto;
+
   color: var(--paragraf-text-color);
 }
 .contact-heder .link {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
+.contact-heder .item + .item {
+  margin-left: 50px;
+}
+
 /* герой */
+
+.hero .container {
+  text-align: center;
+  padding-top: 195px;
+  padding-bottom: 205px;
+}
 .hero .hero-title {
   color: var(--contrast-color);
   font-weight: 900;
@@ -104,18 +206,21 @@ p {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  margin-bottom: 30px;
 }
 
 .hero .hero-button {
+  padding: 9px 31px;
+  border-radius: 4px;
+  border: 1px solid var(--accent-color);
+
   color: var(--contrast-color);
   background-color: var(--accent-color);
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
 
   cursor: pointer;
@@ -125,52 +230,115 @@ p {
 .hero .hero-button:focus {
   color: var(--accent-color);
   background-color: var(--contrast-color);
+  border: 1px solid var(--contrast-color);
 }
 
+/* СЕКЦІЇ */
+
 /* особливості */
+.specifik {
+  padding-top: 89px;
+  padding-bottom: 0;
+}
+
+.specifik-list {
+  display: flex;
+  justify-content: space-between;
+}
+
 .specifik-title {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  margin-bottom: 10px;
 }
 .specifik-text {
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
 
+/* про нас */
+.about {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-title > .item {
+  gap: 30px;
+}
+
 /* наша команда */
+.team-style {
+  background-color: var(--background-color-gray);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .team-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .team-job {
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
+
+  margin-bottom: 30px;
+}
+
+.team {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  gap: 30px;
+}
+
+.team > .item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* ФУТЕР */
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 /* лого футер */
+footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 0;
 
-footer > .logo {
   color: var(--contrast-color);
 }
 
 /* контакти футер */
 .sity {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 9px;
+
   color: var(--contrast-color);
-  font-style: normal;
   line-height: 1.7px;
   letter-spacing: 0.03em;
 }
 
 .mail-tel {
+  display: inline-block;
+  margin-bottom: 9px;
+
   color: rgba(255, 255, 255, 0.6);
-  font-style: normal;
   line-height: 1.7px;
   letter-spacing: 0.03em;
 }
@@ -184,12 +352,24 @@ footer > .logo {
 /* ПОРТФОЛІО */
 
 /* портфоліо кнопки */
+.portfolio {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  gap: 8px;
+}
+
 .portfolio-button {
+  padding: 5px 21px;
+  border-radius: 4px;
+  border: 1px solid var(--background-color-gray);
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0.03em;
+  background-color: var(--background-color-gray);
 
   cursor: pointer;
 }
@@ -198,15 +378,35 @@ footer > .logo {
 .portfolio-button:focus {
   color: var(--contrast-color);
   background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 /* портфоліо зразки */
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  flex-basis: calc(100% - 60px / 3);
+}
+
+.project > .item {
+  border: var(--border-card-project);
+}
+
 .project .name {
+  margin-top: 20px;
+  margin-bottom: 4px;
+  margin-left: 24px;
+
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
+
 .project .type {
+  margin-bottom: 20px;
+  margin-left: 24px;
+
   font-size: 16px;
   line-height: 1.9px;
   letter-spacing: 0.03em;
