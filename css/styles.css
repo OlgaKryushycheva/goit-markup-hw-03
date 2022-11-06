@@ -112,7 +112,7 @@ address {
 /* ХЕДЕР */
 
 .header {
-  border-bottom: var(--border-card-project);
+  border-bottom: 1px solid #ececec;
 }
 .container-header {
   display: flex;
@@ -329,9 +329,9 @@ footer .logo {
 }
 
 /* контакти футер */
+
 .sity {
   display: inline-block;
-  margin-top: 20px;
   margin-bottom: 9px;
 
   color: var(--contrast-color);
