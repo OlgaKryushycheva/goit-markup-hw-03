@@ -30,9 +30,9 @@
   <body>
     <!--heder-->
     <header class="header">
-      <div class="container container-header">
-        <a href="./index.html" class="logo" lang="en"> <span class="accent">Web</span>Studio</a>
-        <nav>
+      <div class="container">
+        <nav class="header-nav">
+          <a href="./index.html" class="logo" lang="en"> <span class="accent">Web</span>Studio</a>
           <ul class="site-nav">
             <li class="item"><a href="./index.html" class="link current">Студія</a></li>
             <li class="item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
@@ -51,11 +51,9 @@
 
     <main>
       <!--hero-->
-      <section class="hero style">
-        <div class="container">
-          <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="hero-button">Замовити послугу</button>
-        </div>
+      <section class="section hero">
+        <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
+        <button type="button" class="hero-button">Замовити послугу</button>
       </section>
 
       <!--section 1 Особливості, сховати-->
@@ -84,7 +82,7 @@
               </p>
             </li>
 
-            <li>
+            <li class="item">
               <h3 class="specifik-title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
               <p class="specifik-text">
                 Значимість цих проблем настільки очевидна, що реалізація планових завдань.
@@ -95,19 +93,26 @@
       </section>
 
       <!--section 2 Про нас-->
-      <section class="section container">
-        <h2 class="section-title">Чим ми займаємося</h2>
-        <ul class="about">
-          <li class="item">
-            <img src="./images/studio/img1.jpg" alt="ноутбук" width="370" height="294" />
-          </li>
-          <li class="item">
-            <img src="./images/studio/img2.jpg" alt="мобільний телефон" width="370" height="294" />
-          </li>
-          <li class="item">
-            <img src="./images/studio/img3.jpg" alt="планщет" width="370" height="294" />
-          </li>
-        </ul>
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Чим ми займаємося</h2>
+          <ul class="about">
+            <li class="item">
+              <img src="./images/studio/img1.jpg" alt="ноутбук" width="370" height="294" />
+            </li>
+            <li class="item">
+              <img
+                src="./images/studio/img2.jpg"
+                alt="мобільний телефон"
+                width="370"
+                height="294"
+              />
+            </li>
+            <li class="item">
+              <img src="./images/studio/img3.jpg" alt="планщет" width="370" height="294" />
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!--section 3 Наша команда-->
@@ -168,11 +173,11 @@
     </main>
 
     <!--footer-->
-    <footer class="style footer">
+    <footer class="footer">
       <div class="container">
         <a href="./index.html" class="logo" lang="en"> <span class="accent">Web</span>Studio</a>
         <address>
-          <ul>
+          <ul class="address-footer">
             <li><a href="" class="sity">м. Київ, пр-т Лесі Українки, 26</a></li>
             <li>
               <a href="mailto:info@devstudio.com" class="mail-tel">info@devstudio.com</a>
