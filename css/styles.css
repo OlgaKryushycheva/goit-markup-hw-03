@@ -9,14 +9,6 @@
   --border-card-project: 1px solid #eeeeee;
 }
 
-/* ПРОВЕРКА РАБОТЫ ДЕСКТОП */
-body {
-  background-color: var(--contrast-color);
-  color: var(--primary-text-color);
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-}
-
 /* ЗАГАЛЬНІ */
 
 body {
@@ -78,8 +70,6 @@ img {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* заголовки секцій */
@@ -114,10 +104,12 @@ img {
 .header {
   border-bottom: 1px solid #ececec;
 }
+
 .header .container {
   display: flex;
   align-items: center;
 }
+
 .header-nav {
   display: flex;
   align-items: center;
@@ -197,32 +189,34 @@ img {
 /* герой */
 
 .hero {
-  padding-top: 195px;
-  padding-bottom: 205px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
   width: 1600px;
   text-align: center;
 
   background-color: var(--background-color-black);
 }
-.hero .hero-title {
+
+.hero-content {
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-title {
   color: var(--contrast-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
   margin-bottom: 30px;
 }
 
-.hero-title {
-  width: 696px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero .hero-button {
+.hero-button {
   padding: 9px 31px;
   border-radius: 4px;
   border: 1px solid var(--accent-color);
@@ -288,7 +282,8 @@ img {
 /* наша команда */
 .our-team {
   background-color: var(--background-color-gray);
-  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .team-name {
@@ -328,10 +323,7 @@ img {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  margin-right: auto;
-  margin-left: auto;
 
-  width: 1600px;
   background-color: var(--background-color-black);
 }
 
@@ -358,7 +350,7 @@ footer .logo {
   display: inline-block;
 
   color: var(--contrast-color);
-  line-height: 1.7px;
+  line-height: 1.7;
   letter-spacing: 0.03em;
 }
 
@@ -366,7 +358,7 @@ footer .logo {
   display: inline-block;
 
   color: rgba(255, 255, 255, 0.6);
-  line-height: 1.7px;
+  line-height: 1.7;
   letter-spacing: 0.03em;
 }
 
@@ -406,8 +398,6 @@ footer .logo {
   color: var(--contrast-color);
   background-color: var(--accent-color);
   border: 1px solid var(--accent-color);
-  /* box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12); */
 }
 
 /* портфоліо зразки */
@@ -421,16 +411,12 @@ footer .logo {
   border: var(--border-card-project);
 }
 
-/* .project > .item:focus,
-.project > .item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-} */
+.project-description {
+  padding: 20px 24px;
+}
 
 .project .name {
-  margin-top: 20px;
   margin-bottom: 4px;
-  margin-left: 24px;
 
   font-size: 18px;
   line-height: 2;
@@ -438,10 +424,7 @@ footer .logo {
 }
 
 .project .type {
-  margin-bottom: 20px;
-  margin-left: 24px;
-
   font-size: 16px;
-  line-height: 1.9px;
+  line-height: 1.88;
   letter-spacing: 0.03em;
 }
